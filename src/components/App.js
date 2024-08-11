@@ -19,6 +19,11 @@ function App() {
     }
   }
 
+  function handleRestart() {
+    setCurrentQuestion(1);
+    setScore(0);
+  }
+
   return (
     <main>
       <section>
@@ -31,6 +36,7 @@ function App() {
           <>
             <h1>Game Over</h1>
             <h2>Total Correct: {score}</h2>
+            <button onClick={handleRestart}>Restart Quiz</button>
           </>
         )}
       </section>
@@ -39,3 +45,4 @@ function App() {
 }
 
 export default App;
+
